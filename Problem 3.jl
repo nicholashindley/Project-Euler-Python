@@ -1,5 +1,5 @@
 function largest_prime_factor(n)
-    factor = Int(ceil(sqrt(n))) #since the largest prime factor of some given integer n cannot be greater than the square-root of n
+    factor = ceil(Int,sqrt(n))) #since the largest prime factor of some given integer n cannot be greater than the square-root of n
     
     if iseven(n) == true  #ensures that we only consider odd values
         factor += 1
