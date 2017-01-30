@@ -6,7 +6,6 @@ function multiples_of_3_and_5(x)
         end
 	end
     return total
-
 	end
 
 println(multiples(1000))
