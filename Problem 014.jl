@@ -27,6 +27,6 @@ function longest_collatz_sequence(x)
     end
     
     return max_m
-    end
+ end
     
 println(longest_collatz_sequence(10^6))
