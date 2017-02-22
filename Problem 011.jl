@@ -7,6 +7,7 @@ function largest_product_in_a_grid(no_digits)
         push!(grid, parse(Int,num))
         end
     end
+    
     grid = transpose(reshape(grid,20,20)) #constructs the desired 20x20 matrix from the file "p011.txt"
 
     left_right = 0 
@@ -14,7 +15,7 @@ function largest_product_in_a_grid(no_digits)
     for row = 1:20
         row_product = 0
         
-        for col = 1:20-(no_digits - 1)
+        for col = 1:20 - (no_digits - 1)
             col_product = 1
             
             for i = 0:no_digits - 1
@@ -114,6 +115,6 @@ function largest_product_in_a_grid(no_digits)
     end
 
     return largest_product
-    end
+end
 
 println(largest_product_in_a_grid(4))
