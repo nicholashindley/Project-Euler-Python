@@ -11,6 +11,6 @@ function highly_divisible_triangular_number(x)
         
         n += 1
     end
-    end
+end
 
 println(highly_divisible_triangular_number(500))
