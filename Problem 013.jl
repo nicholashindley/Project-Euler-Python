@@ -6,6 +6,6 @@ function large_sum(x)
     end
     
     return string(sum(X))[1:x]
-    end
+end
 
 println(large_sum(10))
