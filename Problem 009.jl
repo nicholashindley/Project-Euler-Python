@@ -4,14 +4,15 @@ function special_pythagorean_triplet(x) #c.f. Dickson's method for generating Py
     while r > 0
         n = Int((r^2)/2)
         factors_list = [n]
-        for i = 1:n-1
+        
+        for i = 1:n - 1
             if n % i == 0
                 push!(factors_list, i)
             end
         end
+        
         factors_list = sort!(factors_list)
-    
-        for i=0:Int(length(factors_list)/2)-1
+        for i = 0:Int(length(factors_list)/2) - 1
             s = factors_list[1+i]
             t = factors_list[end-i]
         
@@ -26,6 +27,6 @@ function special_pythagorean_triplet(x) #c.f. Dickson's method for generating Py
         
         r += 2
     end
-    end
+end
 
 println(special_pythagorean_triplet(1000))
