@@ -12,14 +12,14 @@ end
 
 function amicable_sum(x)
     total = 0
-    n = 2
+    n = 1
     
     while n < x
         if d(n) > n && n == d(d(n)) #the first condition ensures that we do not double-count n & d(n); the second condition ensures that n is indeed amicable
             total += n + d(n)
         end
         
-        n += 2
+        n += 1
     end
     
     return total
