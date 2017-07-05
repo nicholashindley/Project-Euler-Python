@@ -1,5 +1,10 @@
-function smallest_multiple(x)
-    return lcm([i for i in 2:x])
-end
+def Smallest_multiple(x):
+    i = x
 
-println(smallest_multiple(20))
+    while i > 0:
+        if all((i % j == 0) for j in range(2, x + 1)):
+            return i
+        
+        i += x
+    
+print(Smallest_multiple(20))
