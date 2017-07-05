@@ -1,8 +1,6 @@
-function multiples_of_3_and_5(x)
-    mult_3=[i for i=3:3:x-1]
-    mult_5=[i for i=5:5:x-1]
-    
-    return sum(union(mult_3,mult_5))
-end
+def Multiples_3_and_5(x):
+    mult_3 = set(i for i in range(3,x,3))
+    mult_5 = set(i for i in range(5,x,5))
+    return sum(mult_3.union(mult_5))
 
-println(multiples_of_3_and_5(1000))
+print(Multiples_3_and_5(1000))
