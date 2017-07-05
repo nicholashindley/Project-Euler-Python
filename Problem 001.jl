@@ -1,13 +1,10 @@
-function multiples(x)
-    total=0
+def Multiples_3_and_5(x):
+    total = 0 
     
-    for i=3:x-1
-        if i%3==0 || i%5==0
+    for i in range(3, x):
+        if i % 3 == 0 or i % 5 == 0:
             total += i
-        end
-    end
     
     return total
-end
 
-println(multiples(1000))
+print Multiples_3_and_5(1000)
