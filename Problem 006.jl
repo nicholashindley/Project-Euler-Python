@@ -1,5 +1,4 @@
-function sum_square_difference(x)
-    return abs(sum([i^2 for i in 1:x])-(sum([i for i in 1:x])^2))
-end
+def Sum_square_difference(x):
+    return sum(i for i in range(x + 1))**2 - sum(i**2 for i in range(x + 1))
 
-println(sum_square_difference(100))
+print(Sum_square_difference(100))
