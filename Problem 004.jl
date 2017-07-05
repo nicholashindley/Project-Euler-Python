@@ -1,15 +1,11 @@
-function largest_palindrome_product(no_digits)  #input is the maximum number of digits of the numbers whose product must be palindromic
+def Largest_palindrome_product(n):
     largest_palindrome = 0
     
-    for i = 10^(no_digits - 1): 10^(no_digits) - 1
-        for j = i : 10^(no_digits) - 1
-            if string(i * j) == reverse(string(i * j)) && i * j > largest_palindrome
-                largest_palindrome = i * j
-            end
-        end
-    end
-    
+    for i in range(10**(n-1),10**n + 1):
+        for j in range(10**(n-1),i + 1):
+            if str(i * j) == str(i * j)[::-1] and (i * j) > largest_palindrome:
+                largest_palindrome = (i * j)
+   
     return largest_palindrome
-end
-
-println(largest_palindrome_product(3))
+    
+print(Largest_palindrome_product(3))
