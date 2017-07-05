@@ -1,18 +1,20 @@
-function largest_prime_factor(n)
-    factor = ceil(Int,sqrt(n))) #since the largest prime factor of some given integer n cannot be greater than the square-root of n
-    
-    if iseven(n) == true  #ensures that we only consider odd values
-        factor += 1
-    end
-    
-    while factor > 0
-        if isprime(factor) && n % factor == 0
-            return factor
-        end
+from math import sqrt
 
-    factor -= 2
-    end
+def Largest_prime_factor(x):
+    i = int(sqrt(x) + 1)
     
-    end
+    if i % 2 == 0:
+        i += 1
+    
+    while i > 1:
+        j = int(sqrt(i) + 1)
+        
+        if j % 2 == 0:
+            j += 1
+        
+        if x % i == 0 and not any((i % k == 0) for k in range(j, 1, -2)):
+            return i
 
-println(largest_prime_factor(600851475143))
+        i -= 2
+            
+print(Largest_prime_factor(600851475143))
