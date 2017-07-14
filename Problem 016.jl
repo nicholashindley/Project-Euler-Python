@@ -1,5 +1,4 @@
-function power_digit_sum(x)
-    return sum([Int(i) - 48 for i in collect(string(BigInt(2)^x))])
-end
+def Power_digit_sum(x):
+    return sum(int(i) for i in str(2**x))
 
-println(power_digit_sum(1000))
+print(Power_digit_sum(1000))
